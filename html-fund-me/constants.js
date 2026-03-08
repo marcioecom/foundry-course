@@ -1,4 +1,29 @@
 export const contractAddress = "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512"; // anvil
+export const priceFeedAddress = "0x5fbdb2315678afecb367f032d93f642f64180aa3"; // anvil MockV3Aggregator
+
+export const priceFeedAbi = [
+  {
+    type: "function",
+    name: "latestRoundData",
+    inputs: [],
+    outputs: [
+      { name: "roundId", type: "uint80" },
+      { name: "answer", type: "int256" },
+      { name: "startedAt", type: "uint256" },
+      { name: "updatedAt", type: "uint256" },
+      { name: "answeredInRound", type: "uint80" },
+    ],
+    stateMutability: "view",
+  },
+  {
+    type: "function",
+    name: "decimals",
+    inputs: [],
+    outputs: [{ name: "", type: "uint8" }],
+    stateMutability: "view",
+  },
+];
+
 export const abi = [
   {
     type: "constructor",

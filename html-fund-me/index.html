@@ -24,6 +24,26 @@
           </div>
           <button class="btn btn-primary" id="connectButton" style="width: auto;">Connect</button>
         </div>
+        <div class="network-info" id="networkInfo"></div>
+      </div>
+
+      <!-- Contract Info -->
+      <div class="card">
+        <div class="card-title">Contract Info</div>
+        <div class="info-grid">
+          <div class="info-item">
+            <span class="info-label">Owner</span>
+            <span class="info-value mono" id="ownerAddress">--</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Minimum Fund</span>
+            <span class="info-value" id="minimumUsd">--</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">ETH / USD</span>
+            <span class="info-value" id="ethPrice">--</span>
+          </div>
+        </div>
       </div>
 
       <!-- Fund -->
@@ -52,6 +72,14 @@
         <div class="card-title">Withdraw (Owner Only)</div>
         <button class="btn btn-danger" id="withdrawButton">Withdraw All</button>
         <div class="feedback" id="withdrawFeedback"></div>
+      </div>
+
+      <!-- Funders -->
+      <div class="card">
+        <div class="card-title">Funders</div>
+        <div id="fundersList" class="funders-list">
+          <div class="funders-empty">Connect wallet to view funders</div>
+        </div>
       </div>
     </div>
 
