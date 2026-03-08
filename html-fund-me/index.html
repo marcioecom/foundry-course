@@ -1,19 +1,60 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Fund Me App</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FundMe</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
-    <button id="connectButton">Connect</button>
-    <button id="balanceButton">getBalance</button>
-    <button id="withdrawButton">Withdraw</button>
-    <!-- <form> -->
-    <label for="ethAmount">ETH Amount</label>
-    <input id="ethAmount" placeholder="0.1" />
-    <button type="button" id="fundButton">Fund</button>
-    <!-- </form> -->
-  </body>
+    <div class="container">
+      <div class="header">
+        <h1>FundMe</h1>
+        <p>Decentralized crowdfunding</p>
+      </div>
 
-  <script src="./index.js" type="module"></script>
+      <!-- Wallet Connection -->
+      <div class="card">
+        <div class="card-title">Wallet</div>
+        <div class="wallet-info">
+          <div>
+            <span class="wallet-status" id="walletStatus"></span>
+            <span class="wallet-address" id="walletAddress">Not connected</span>
+          </div>
+          <button class="btn btn-primary" id="connectButton" style="width: auto;">Connect</button>
+        </div>
+      </div>
+
+      <!-- Fund -->
+      <div class="card">
+        <div class="card-title">Fund</div>
+        <div class="input-group">
+          <input class="input" type="number" id="ethAmount" placeholder="0.1" step="0.01" min="0" />
+          <span class="input-suffix">ETH</span>
+        </div>
+        <button class="btn btn-primary" id="fundButton" style="margin-top: 0.75rem;">Fund</button>
+        <div class="feedback" id="fundFeedback"></div>
+      </div>
+
+      <!-- Balance -->
+      <div class="card">
+        <div class="card-title">Contract Balance</div>
+        <div class="balance-display">
+          <div class="balance-value" id="balanceValue">--</div>
+          <div class="balance-label">ETH</div>
+        </div>
+        <button class="btn btn-secondary" id="balanceButton">Refresh Balance</button>
+      </div>
+
+      <!-- Withdraw -->
+      <div class="card">
+        <div class="card-title">Withdraw (Owner Only)</div>
+        <button class="btn btn-danger" id="withdrawButton">Withdraw All</button>
+        <div class="feedback" id="withdrawFeedback"></div>
+      </div>
+    </div>
+
+    <script src="./index.js" type="module"></script>
+  </body>
 </html>
