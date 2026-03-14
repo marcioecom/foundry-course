@@ -19,3 +19,6 @@
 [submodule "foundry-lottery/lib/openzeppelin-contracts"]
 	path = foundry-lottery/lib/openzeppelin-contracts
 	url = https://github.com/openzeppelin/openzeppelin-contracts
+[submodule "foundry-lottery/lib/solmate"]
+	path = foundry-lottery/lib/solmate
+	url = https://github.com/transmissions11/solmate
