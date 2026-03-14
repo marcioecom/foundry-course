@@ -3,7 +3,7 @@ pragma solidity ^0.8.30;
 
 import {Script} from "forge-std/Script.sol";
 import {Raffle} from "src/Raffle.sol";
-import {HelperConfig} from "script/HelperConfig.sol";
+import {HelperConfig} from "script/HelperConfig.s.sol";
 
 contract DeployRaffle is Script {
     function run() external returns (Raffle) {}
@@ -25,6 +25,6 @@ contract DeployRaffle is Script {
         );
         vm.stopBroadcast();
 
-        return (fundMe, helperConfig);
+        return (raffle, helperConfig);
     }
 }
