@@ -11,10 +11,19 @@
       "rev": "0844d7e1fc5e60d77b68e469bff60265f236c398"
     }
   },
+  "lib/foundry-devops": {
+    "tag": {
+      "name": "0.4.0",
+      "rev": "efff097a87e70c3d15661c9f2a2daeae0b33d5d5"
+    }
+  },
   "lib/openzeppelin-contracts": {
     "tag": {
       "name": "v5.6.1",
       "rev": "5fd1781b1454fd1ef8e722282f86f9293cacf256"
     }
+  },
+  "lib/solmate": {
+    "rev": "89365b880c4f3c786bdd453d4b8e8fe410344a69"
   }
 }
