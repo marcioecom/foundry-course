@@ -13,3 +13,10 @@ docs/
 
 # Dotenv file
 .env
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Superpowers
+.superpowers/

@@ -1,0 +1,72 @@
+export const raffleAbi = [
+  {
+    type: 'function',
+    name: 'enterRaffle',
+    inputs: [],
+    outputs: [],
+    stateMutability: 'payable',
+  },
+  {
+    type: 'function',
+    name: 'checkUpkeep',
+    inputs: [{ name: '', type: 'bytes', internalType: 'bytes' }],
+    outputs: [
+      { name: 'upkeepNeeded', type: 'bool', internalType: 'bool' },
+      { name: '', type: 'bytes', internalType: 'bytes' },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'getEntranceFee',
+    inputs: [],
+    outputs: [{ name: '', type: 'uint256', internalType: 'uint256' }],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'getRaffleState',
+    inputs: [],
+    outputs: [{ name: '', type: 'uint8', internalType: 'enum Raffle.RaffleState' }],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'getPlayer',
+    inputs: [{ name: 'indexOfPlayer', type: 'uint256', internalType: 'uint256' }],
+    outputs: [{ name: '', type: 'address', internalType: 'address' }],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'getRecentWinner',
+    inputs: [],
+    outputs: [{ name: '', type: 'address', internalType: 'address' }],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'getLastTimestamp',
+    inputs: [],
+    outputs: [{ name: '', type: 'uint256', internalType: 'uint256' }],
+    stateMutability: 'view',
+  },
+  {
+    type: 'event',
+    name: 'RaffleEntered',
+    inputs: [{ name: 'player', type: 'address', indexed: true, internalType: 'address' }],
+    anonymous: false,
+  },
+  {
+    type: 'event',
+    name: 'WinnerPicked',
+    inputs: [{ name: 'winner', type: 'address', indexed: true, internalType: 'address' }],
+    anonymous: false,
+  },
+  {
+    type: 'event',
+    name: 'RequestedRaffleWinner',
+    inputs: [{ name: 'requestId', type: 'uint256', indexed: true, internalType: 'uint256' }],
+    anonymous: false,
+  },
+] as const
